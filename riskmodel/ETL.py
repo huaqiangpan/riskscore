@@ -55,7 +55,7 @@ class DbRead(object):
         dbMysql.close()
         return data
 
-    def read_mongodb(self, collection,findCondition):
+    def read_mongodb(self, collection, findCondition):
         """
         从mongoDB中获取数据
          :param collection: object,表名
