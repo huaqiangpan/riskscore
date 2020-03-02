@@ -71,7 +71,7 @@ class DbRead(object):
         return data
 
 
-class csvRead(object):
+class CsvRead(object):
     # 所有变量
     def __init__(self):
         self.all_feature = ['status_of_existing_checking_account', 'duration_in_month', 'credit_history', 'purpose',
