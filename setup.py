@@ -20,7 +20,7 @@ setup(
     license=" ",                                  #程序的授权信息
     description=" ",                              #程序的简单描述
     long_description=" ",                         #程序的详细描述
-    platforms=" ",                                #程序适用的软件平台列表
+    platforms="any",                                #程序适用的软件平台列表
     classifiers=" ",                              #程序的所属分类列表
     keywords=" ",                                 #程序的关键字列表
     packages=" ",                                 #需要处理的包目录（包含__init__.py的文件夹）
@@ -38,5 +38,5 @@ setup(
                                                   #另外，也可以排除一些特定的包find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"])
     package_data =
     {'riskscore':['data/*.txt','data/*.csv'] },   #数据位于packages的子目录里
-    install_requires = ['']                       #需要安装的依赖包
+    install_requires = []                       #需要安装的依赖包
 )

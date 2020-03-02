@@ -1,5 +1,10 @@
 import riskmodel as rm
 
 
-data =
+
+germancredit =rm.csvRead()
+german = germancredit.get_data()
+
+
+
 
