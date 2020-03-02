@@ -12,6 +12,9 @@ connect database
 """
 from pymongo import MongoClient
 import pymysql
+import numpy as np
+import pkg_resources
+import pandas as pd
 
 
 class DbRead(object):
@@ -104,11 +107,11 @@ class CsvRead(object):
         }
 
     def get_data(self):
-        DATA_FILE = pkg_resources.resource_filename('riskModel', 'data/germancredit.csv')
+        DATA_FILE = pkg_resources.resource_filename('riskmodel', 'data/germancredit.csv')
         data = pd.read_csv(DATA_FILE, encoding='utf-8', sep=' ', header=None, names=self.all_feature + ["target"])
         return data
 
     def get_describe(self):
-        DATA_FILE = pkg_resources.resource_filename('riskModel', 'data/german.txt')
+        DATA_FILE = pkg_resources.resource_filename('riskmodel', 'data/german.txt')
         with open(DATA_FILE, 'r+') as f:
             print(f.read())
